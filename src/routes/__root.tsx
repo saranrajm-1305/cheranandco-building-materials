@@ -84,11 +84,15 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "Cheran & Co. — Building Materials Supplier in Coimbatore" },
       { name: "description", content: "One stop for cement, steel, blocks, sand & aggregates in Podanur, Coimbatore. Quality materials, 24/7 delivery, fair prices." },
       { name: "author", content: "Cheran & Co." },
-      { property: "og:title", content: "Cheran & Co. — Building Materials Supplier" },
-      { property: "og:description", content: "Trusted supplier of cement, steel, blocks, sand and aggregates in Coimbatore. Open 24/7." },
+      { property: "og:title", content: "Cheran & Co. — Building Materials Supplier in Coimbatore" },
+      { property: "og:description", content: "One stop for cement, steel, blocks, sand & aggregates in Podanur, Coimbatore. Quality materials, 24/7 delivery, fair prices." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Cheran & Co. — Building Materials Supplier in Coimbatore" },
+      { name: "twitter:description", content: "One stop for cement, steel, blocks, sand & aggregates in Podanur, Coimbatore. Quality materials, 24/7 delivery, fair prices." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ba8edcb3-6eb1-459e-9743-471dc3517432" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/ba8edcb3-6eb1-459e-9743-471dc3517432" },
     ],
     links: [
       {
