@@ -36,34 +36,34 @@ function HomePage() {
       <section className="relative overflow-hidden">
         <img src={hero} alt="Cheran & Co. building materials yard" width={1920} height={1080} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0" style={{ background: "linear-gradient(120deg, oklch(0.15 0.05 264 / 0.92) 0%, oklch(0.22 0.06 264 / 0.78) 50%, oklch(0.22 0.06 264 / 0.5) 100%)" }} />
-        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-20 md:grid-cols-2 md:gap-12 md:px-6 md:py-28 lg:py-36">
+        <div className="relative mx-auto grid max-w-7xl gap-10 px-4 py-14 md:grid-cols-2 md:gap-12 md:px-6 md:py-28 lg:py-36">
           <div className="text-primary-foreground">
             <div className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-white/5 px-4 py-1.5 text-xs uppercase tracking-widest text-accent backdrop-blur">
               <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" /> Open 24/7 in Coimbatore
             </div>
-            <h1 className="mt-5 font-serif text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
+            <h1 className="mt-5 font-serif text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
               One Stop for All Your <span className="text-accent">Building Needs</span>
             </h1>
-            <p className="mt-5 max-w-xl text-base text-white/80 md:text-lg">
+            <p className="mt-5 max-w-xl text-sm text-white/80 sm:text-base md:text-lg">
               From cement and steel to blocks, sand and aggregates — Cheran & Co. delivers premium building materials to your site, on time, every time.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
                 Get Free Quote <ArrowRight className="h-4 w-4" />
               </Link>
-              <a href="tel:+919865467787" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10">
+              <a href="tel:+919865467787" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10">
                 <Phone className="h-4 w-4" /> +91 98654 67787
               </a>
             </div>
-            <div className="mt-10 grid grid-cols-3 gap-6 border-t border-white/15 pt-6">
+            <div className="mt-8 grid grid-cols-3 gap-3 border-t border-white/15 pt-6 sm:gap-6">
               {[
                 { n: "500+", l: "Projects Served" },
                 { n: "24/7", l: "Availability" },
                 { n: "100%", l: "Quality Assured" },
               ].map((s) => (
                 <div key={s.l}>
-                  <div className="font-serif text-2xl font-bold text-accent md:text-3xl">{s.n}</div>
-                  <div className="text-xs text-white/70">{s.l}</div>
+                  <div className="font-serif text-xl font-bold text-accent sm:text-2xl md:text-3xl">{s.n}</div>
+                  <div className="text-[11px] leading-tight text-white/70 sm:text-xs">{s.l}</div>
                 </div>
               ))}
             </div>
