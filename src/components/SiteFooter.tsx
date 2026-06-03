@@ -14,7 +14,7 @@ export function SiteFooter() {
               <div className="text-[10px] uppercase tracking-widest text-white/60">Building Materials Supplier</div>
             </div>
           </div>
-          <p className="mt-4 text-sm text-white/70">One stop for all your building needs in Coimbatore. Quality materials, timely delivery, fair prices.</p>
+          <p className="mt-4 text-sm text-white/70">One stop for all your building needs in Coimbatore. Quality materials, equipment rental, timely delivery and fair prices.</p>
         </div>
         <div>
           <h4 className="mb-4 font-serif text-lg text-accent">Quick Links</h4>

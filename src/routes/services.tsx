@@ -1,5 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Truck, ClipboardList, Headphones, Package, MapPinned, Calculator } from "lucide-react";
+import { Truck, ClipboardList, Headphones, Package, MapPinned, Calculator, Construction, Phone } from "lucide-react";
+import jcbImg from "@/assets/rental-jcb.jpg";
+import dumpImg from "@/assets/rental-dumptruck.jpg";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -22,6 +24,8 @@ const services = [
   { i: ClipboardList, t: "Project Consultation", d: "Tap into our experience to choose the right materials and brands for every stage of construction." },
   { i: Headphones, t: "24/7 Customer Support", d: "Whether it's 3 PM or 3 AM, our team picks up the phone. Emergencies and last-minute orders welcome." },
   { i: MapPinned, t: "Region-Wide Coverage", d: "Serving Podanur, Madukkarai, Sundarapuram, Kuniyamuthur, Pollachi Road and the wider Coimbatore region." },
+  { i: Construction, t: "JCB / Backhoe Rental", d: "Available for excavation, loading and site preparation. Hire by the hour or day across Coimbatore." },
+  { i: Truck, t: "Dump Truck Rental", d: "Heavy-duty dump trucks for transporting sand, aggregates and debris to and from your site." },
 ];
 
 function ServicesPage() {
@@ -35,7 +39,11 @@ function ServicesPage() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mx-auto max-w-2xl text-center">
+          <div className="text-xs uppercase tracking-widest text-accent">What We Offer</div>
+          <h2 className="mt-2 font-serif text-3xl font-bold text-navy md:text-4xl">Our Services</h2>
+        </div>
+        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
             <div key={s.t} className="group rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
               <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-navy to-navy-deep text-accent transition-transform group-hover:scale-110"><s.i className="h-6 w-6" /></div>
@@ -43,6 +51,43 @@ function ServicesPage() {
               <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* EQUIPMENT RENTAL */}
+      <section className="bg-secondary py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-xs uppercase tracking-widest text-accent">Equipment Rental</div>
+            <h2 className="mt-2 font-serif text-3xl font-bold text-navy md:text-4xl">JCB & Dump Trucks on Hire</h2>
+            <p className="mt-3 text-muted-foreground">Need heavy equipment for your site? We rent out JCB backhoes and dump trucks at competitive hourly and daily rates across Coimbatore.</p>
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={jcbImg} alt="JCB Backhoe Rental" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-xl font-bold text-navy">JCB / Backhoe Rental</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Ideal for excavation, trenching, loading and site clearing. Experienced operators available on request. Flexible hourly and daily booking.</p>
+                <a href="tel:+919865467787" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:text-accent">
+                  <Phone className="h-4 w-4" /> Call to Book — +91 98654 67787
+                </a>
+              </div>
+            </div>
+            <div className="group overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={dumpImg} alt="Dump Truck Rental" loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-serif text-xl font-bold text-navy">Dump Truck Rental</h3>
+                <p className="mt-2 text-sm text-muted-foreground">Heavy-duty tipper trucks for moving sand, aggregates, debris and construction waste. Reliable drivers and on-time scheduling.</p>
+                <a href="tel:+919865467787" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:text-accent">
+                  <Phone className="h-4 w-4" /> Call to Book — +91 98654 67787
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
       <section className="bg-secondary py-20">

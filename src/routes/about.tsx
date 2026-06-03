@@ -68,6 +68,7 @@ function AboutPage() {
               "Reliable site delivery across Coimbatore region",
               "Transparent pricing with bulk discounts",
               "24/7 availability — even on holidays",
+              "JCB / Backhoe & dump truck rental available",
               "Friendly, locally-rooted team",
             ].map((b) => (
               <li key={b} className="flex gap-3 text-sm"><CheckCircle2 className="h-5 w-5 shrink-0 text-accent" /> {b}</li>

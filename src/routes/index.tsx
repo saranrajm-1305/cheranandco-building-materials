@@ -27,6 +27,8 @@ const products = [
   { name: "M-Sand & River Sand", desc: "Washed, graded sand for plastering & concreting." },
   { name: "Aggregates / Jelly", desc: "20mm, 12mm & 40mm jelly for all RCC works." },
   { name: "Bricks", desc: "Red bricks, fly-ash bricks & AAC blocks." },
+  { name: "JCB / Backhoe Rental", desc: "Hourly & daily rental for excavation & loading." },
+  { name: "Dump Truck Rental", desc: "Heavy-duty tipper trucks for site transport." },
 ];
 
 function HomePage() {
@@ -45,7 +47,7 @@ function HomePage() {
               One Stop for All Your <span className="text-accent">Building Needs</span>
             </h1>
             <p className="mt-5 max-w-xl text-sm text-white/80 sm:text-base md:text-lg">
-              From cement and steel to blocks, sand and aggregates — Cheran & Co. delivers premium building materials to your site, on time, every time.
+              From cement and steel to blocks, sand and aggregates — plus JCB & dump truck rental. Cheran & Co. delivers premium building materials and equipment to your site, on time, every time.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <a href="tel:+919865467787" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">

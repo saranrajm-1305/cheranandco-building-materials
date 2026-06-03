@@ -8,6 +8,8 @@ import imgAggregates from "@/assets/prod-aggregates.jpg";
 import imgBricks from "@/assets/prod-bricks.jpg";
 import imgPlumbing from "@/assets/prod-plumbing.jpg";
 import imgHardware from "@/assets/prod-hardware.jpg";
+import imgJcb from "@/assets/rental-jcb.jpg";
+import imgDump from "@/assets/rental-dumptruck.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -34,6 +36,11 @@ const products = [
   { img: imgHardware, name: "Hardware & Tools", brands: "On Request", desc: "Nails, binding wire, tools and accessories to keep your site moving without trips to multiple shops." },
 ];
 
+const rentals = [
+  { img: imgJcb, name: "JCB / Backhoe Rental", brands: "Hourly · Daily · With Operator", desc: "Excavation, trenching, loading and site clearing. Experienced operators available. Book by the hour or day across Coimbatore." },
+  { img: imgDump, name: "Dump Truck Rental", brands: "Tipper · Heavy Duty · On Time", desc: "Transport sand, aggregates, debris and construction waste. Reliable drivers and flexible scheduling for your project needs." },
+];
+
 function ProductsPage() {
   return (
     <>
@@ -41,7 +48,7 @@ function ProductsPage() {
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <div className="text-xs uppercase tracking-widest text-accent">Our Products</div>
           <h1 className="mt-3 font-serif text-4xl font-bold md:text-5xl">Everything You Need to Build</h1>
-          <p className="mt-5 text-white/80">From foundation to finishing — explore our full range of building materials.</p>
+          <p className="mt-5 text-white/80">From foundation to finishing — plus JCB & dump truck rental for your site.</p>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
@@ -61,6 +68,34 @@ function ProductsPage() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* RENTAL EQUIPMENT */}
+      <section className="bg-secondary py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-xs uppercase tracking-widest text-accent">Equipment Rental</div>
+            <h2 className="mt-2 font-serif text-3xl font-bold text-navy md:text-4xl">JCB & Dump Truck on Hire</h2>
+            <p className="mt-3 text-muted-foreground">Heavy machinery and transport available for your construction site. Flexible hourly and daily rates across Coimbatore.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {rentals.map((p) => (
+              <div key={p.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
+                <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                  <img src={p.img} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="text-[11px] uppercase tracking-widest text-accent">{p.brands}</div>
+                  <h3 className="mt-2 font-serif text-xl font-bold text-navy">{p.name}</h3>
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.desc}</p>
+                  <a href="tel:+919865467787" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:text-accent">
+                    <Phone className="h-4 w-4" /> Call to Enquire
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
       <section className="bg-accent py-14 text-accent-foreground">
