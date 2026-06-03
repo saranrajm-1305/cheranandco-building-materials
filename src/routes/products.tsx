@@ -70,7 +70,34 @@ function ProductsPage() {
           ))}
         </div>
       </section>
-      <section className="bg-accent py-14 text-accent-foreground">
+
+      {/* RENTAL EQUIPMENT */}
+      <section className="bg-secondary py-20">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div className="mx-auto max-w-2xl text-center">
+            <div className="text-xs uppercase tracking-widest text-accent">Equipment Rental</div>
+            <h2 className="mt-2 font-serif text-3xl font-bold text-navy md:text-4xl">JCB & Dump Truck on Hire</h2>
+            <p className="mt-3 text-muted-foreground">Heavy machinery and transport available for your construction site. Flexible hourly and daily rates across Coimbatore.</p>
+          </div>
+          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {rentals.map((p) => (
+              <div key={p.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
+                <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                  <img src={p.img} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                </div>
+                <div className="flex flex-1 flex-col p-6">
+                  <div className="text-[11px] uppercase tracking-widest text-accent">{p.brands}</div>
+                  <h3 className="mt-2 font-serif text-xl font-bold text-navy">{p.name}</h3>
+                  <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.desc}</p>
+                  <a href="tel:+919865467787" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:text-accent">
+                    <Phone className="h-4 w-4" /> Call to Enquire
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-4 text-center md:flex-row md:px-6 md:text-left">
           <div>
             <h2 className="font-serif text-2xl font-bold md:text-3xl">Need something not listed here?</h2>
