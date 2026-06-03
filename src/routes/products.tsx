@@ -1,5 +1,13 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { Phone } from "lucide-react";
+import imgCement from "@/assets/prod-cement.jpg";
+import imgSteel from "@/assets/prod-steel.jpg";
+import imgBlocks from "@/assets/prod-blocks.jpg";
+import imgSand from "@/assets/prod-sand.jpg";
+import imgAggregates from "@/assets/prod-aggregates.jpg";
+import imgBricks from "@/assets/prod-bricks.jpg";
+import imgPlumbing from "@/assets/prod-plumbing.jpg";
+import imgHardware from "@/assets/prod-hardware.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
@@ -16,14 +24,14 @@ export const Route = createFileRoute("/products")({
 });
 
 const products = [
-  { name: "Cement", brands: "Ramco · UltraTech · Dalmia · Coromandel", desc: "OPC 43 & 53 grade, PPC and PSC cement in 50kg bags. Available in any quantity from a single bag to full truckloads." },
-  { name: "Steel & TMT Bars", brands: "Fe 500 · Fe 550 · Fe 600", desc: "Premium TMT bars in 8mm, 10mm, 12mm, 16mm, 20mm and 25mm sizes from leading brands like TATA Tiscon, JSW and Vizag." },
-  { name: "Concrete Blocks", brands: "Solid · Hollow · AAC", desc: "Manufactured on-site with high-grade aggregates. Available in 4\", 6\", 8\" and custom sizes for walls and partitions." },
-  { name: "M-Sand & River Sand", brands: "Plastering · Concreting", desc: "Washed, sieved and graded sand for plastering, masonry and concreting work. Consistent quality, prompt delivery." },
-  { name: "Aggregates / Jelly", brands: "20mm · 12mm · 40mm", desc: "Crushed stone aggregates for RCC, foundations and road works. Sourced from reputed quarries." },
-  { name: "Bricks", brands: "Red · Fly-ash · AAC", desc: "Traditional red bricks, eco-friendly fly-ash bricks and lightweight AAC blocks — choose what suits your project best." },
-  { name: "Plumbing & Electrical", brands: "On Request", desc: "Pipes, fittings, wires and basic electrical supplies — ask us for what you need and we'll arrange it." },
-  { name: "Hardware & Tools", brands: "On Request", desc: "Nails, binding wire, tools and accessories to keep your site moving without trips to multiple shops." },
+  { img: imgCement, name: "Cement", brands: "Ramco · UltraTech · Dalmia · Coromandel", desc: "OPC 43 & 53 grade, PPC and PSC cement in 50kg bags. Available in any quantity from a single bag to full truckloads." },
+  { img: imgSteel, name: "Steel & TMT Bars", brands: "Fe 500 · Fe 550 · Fe 600", desc: "Premium TMT bars in 8mm, 10mm, 12mm, 16mm, 20mm and 25mm sizes from leading brands like TATA Tiscon, JSW and Vizag." },
+  { img: imgBlocks, name: "Concrete Blocks", brands: "Solid · Hollow · AAC", desc: "Manufactured with high-grade aggregates. Available in 4\", 6\", 8\" and custom sizes for walls and partitions." },
+  { img: imgSand, name: "M-Sand & River Sand", brands: "Plastering · Concreting", desc: "Washed, sieved and graded sand for plastering, masonry and concreting work. Consistent quality, prompt delivery." },
+  { img: imgAggregates, name: "Aggregates / Jelly", brands: "20mm · 12mm · 40mm", desc: "Crushed stone aggregates for RCC, foundations and road works. Sourced from reputed quarries." },
+  { img: imgBricks, name: "Bricks", brands: "Red · Fly-ash · AAC", desc: "Traditional red bricks, eco-friendly fly-ash bricks and lightweight AAC blocks — choose what suits your project best." },
+  { img: imgPlumbing, name: "Plumbing & Electrical", brands: "On Request", desc: "Pipes, fittings, wires and basic electrical supplies — ask us for what you need and we'll arrange it." },
+  { img: imgHardware, name: "Hardware & Tools", brands: "On Request", desc: "Nails, binding wire, tools and accessories to keep your site moving without trips to multiple shops." },
 ];
 
 function ProductsPage() {
@@ -37,16 +45,20 @@ function ProductsPage() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
-        <div className="grid gap-6 md:grid-cols-2">
-          {products.map((p, i) => (
-            <div key={p.name} className="group rounded-2xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
-              <div className="flex items-start justify-between">
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy font-serif text-base font-bold text-accent">{String(i + 1).padStart(2, "0")}</div>
-                <div className="text-[11px] uppercase tracking-widest text-accent">{p.brands}</div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {products.map((p) => (
+            <div key={p.name} className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card transition-all hover:-translate-y-1 hover:border-accent hover:shadow-[var(--shadow-elegant)]">
+              <div className="aspect-[4/3] overflow-hidden bg-secondary">
+                <img src={p.img} alt={p.name} loading="lazy" className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <h3 className="mt-5 font-serif text-2xl font-bold text-navy">{p.name}</h3>
-              <p className="mt-2 text-sm text-muted-foreground">{p.desc}</p>
-              <Link to="/contact" className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-navy group-hover:text-accent">Enquire Now <ArrowRight className="h-4 w-4" /></Link>
+              <div className="flex flex-1 flex-col p-6">
+                <div className="text-[11px] uppercase tracking-widest text-accent">{p.brands}</div>
+                <h3 className="mt-2 font-serif text-xl font-bold text-navy">{p.name}</h3>
+                <p className="mt-2 flex-1 text-sm text-muted-foreground">{p.desc}</p>
+                <a href="tel:+919865467787" className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-navy group-hover:text-accent">
+                  <Phone className="h-4 w-4" /> Call to Enquire
+                </a>
+              </div>
             </div>
           ))}
         </div>
@@ -57,7 +69,7 @@ function ProductsPage() {
             <h2 className="font-serif text-2xl font-bold md:text-3xl">Need something not listed here?</h2>
             <p className="mt-1 text-sm opacity-90">We arrange custom orders for almost any building material — just ask.</p>
           </div>
-          <Link to="/contact" className="rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)]">Talk to Us</Link>
+          <a href="tel:+919865467787" className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)]"><Phone className="h-4 w-4" /> Call +91 98654 67787</a>
         </div>
       </section>
     </>

@@ -1,8 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import ch1 from "@/assets/ch1.asset.json";
-import ch2 from "@/assets/ch2.asset.json";
-import ch3 from "@/assets/ch3.asset.json";
-import ch4 from "@/assets/ch4.asset.json";
+import yard from "@/assets/about-yard.jpg";
+import yard2 from "@/assets/about-yard2.jpg";
+import delivery from "@/assets/gallery-delivery.jpg";
+import blocks from "@/assets/prod-blocks.jpg";
+import cement from "@/assets/prod-cement.jpg";
+import steel from "@/assets/prod-steel.jpg";
 
 export const Route = createFileRoute("/gallery")({
   head: () => ({
@@ -19,10 +21,12 @@ export const Route = createFileRoute("/gallery")({
 });
 
 const items = [
-  { src: ch1.url, t: "Concrete Block Production" },
-  { src: ch3.url, t: "Ramco Cement Stock" },
-  { src: ch4.url, t: "Cheran & Co. Yard Entrance" },
-  { src: ch2.url, t: "Project Site Delivery" },
+  { src: yard, t: "Our Yard in Podanur" },
+  { src: cement, t: "Cement Stock" },
+  { src: steel, t: "TMT Steel Bars" },
+  { src: blocks, t: "Concrete Blocks" },
+  { src: yard2, t: "Materials Storage" },
+  { src: delivery, t: "Site Delivery" },
 ];
 
 function GalleryPage() {
@@ -36,7 +40,7 @@ function GalleryPage() {
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
-        <div className="grid gap-5 md:grid-cols-2">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {items.map((it, i) => (
             <figure key={i} className="group relative overflow-hidden rounded-2xl shadow-[var(--shadow-elegant)]">
               <img src={it.src} alt={it.t} loading="lazy" className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105" />

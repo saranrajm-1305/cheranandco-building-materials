@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { CheckCircle2, Target, Heart, Award } from "lucide-react";
-import ch1 from "@/assets/ch1.asset.json";
-import ch4 from "@/assets/ch4.asset.json";
+import aboutYard from "@/assets/about-yard.jpg";
+import aboutYard2 from "@/assets/about-yard2.jpg";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -29,7 +29,7 @@ function AboutPage() {
       </section>
 
       <section className="mx-auto grid max-w-7xl gap-10 px-4 py-20 md:grid-cols-2 md:items-center md:px-6">
-        <img src={ch4.url} alt="Cheran & Co. yard entrance in Podanur" className="rounded-2xl shadow-[var(--shadow-elegant)]" loading="lazy" />
+        <img src={aboutYard} alt="Cheran & Co. yard in Podanur" className="rounded-2xl shadow-[var(--shadow-elegant)]" loading="lazy" />
         <div>
           <h2 className="font-serif text-3xl font-bold text-navy md:text-4xl">Who We Are</h2>
           <p className="mt-4 text-muted-foreground">Located in Podanur, Coimbatore, Cheran & Co. is a full-service building materials supplier serving contractors, builders and homeowners across the region. From a single bag of cement to truckloads of aggregates, we handle orders of every size with the same commitment to quality and timeliness.</p>
@@ -65,7 +65,7 @@ function AboutPage() {
             {[
               "Authorised dealer for leading cement & steel brands",
               "Strict quality checks on every batch we deliver",
-              "Free site delivery across Coimbatore region",
+              "Reliable site delivery across Coimbatore region",
               "Transparent pricing with bulk discounts",
               "24/7 availability — even on holidays",
               "Friendly, locally-rooted team",
@@ -74,7 +74,7 @@ function AboutPage() {
             ))}
           </ul>
         </div>
-        <img src={ch1.url} alt="Concrete blocks at Cheran & Co. yard" className="rounded-2xl shadow-[var(--shadow-elegant)]" loading="lazy" />
+        <img src={aboutYard2} alt="Stocked materials at Cheran & Co. yard" className="rounded-2xl shadow-[var(--shadow-elegant)]" loading="lazy" />
       </section>
     </>
   );
