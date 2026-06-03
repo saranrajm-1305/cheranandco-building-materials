@@ -8,6 +8,8 @@ import imgAggregates from "@/assets/prod-aggregates.jpg";
 import imgBricks from "@/assets/prod-bricks.jpg";
 import imgPlumbing from "@/assets/prod-plumbing.jpg";
 import imgHardware from "@/assets/prod-hardware.jpg";
+import imgJcb from "@/assets/rental-jcb.jpg";
+import imgDump from "@/assets/rental-dumptruck.jpg";
 
 export const Route = createFileRoute("/products")({
   head: () => ({
