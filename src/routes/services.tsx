@@ -5,7 +5,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Services — Delivery, Bulk Supply, Site Support | Cheran & Co." },
-      { name: "description", content: "Free site delivery, bulk supply for contractors, project consultation and 24/7 support across Coimbatore." },
+      { name: "description", content: "Site delivery, bulk supply for contractors, project consultation and 24/7 support across Coimbatore." },
       { property: "og:title", content: "Services — Cheran & Co." },
       { property: "og:description", content: "Delivery, bulk supply, project consultation and 24/7 support in Coimbatore." },
       { property: "og:url", content: "/services" },
@@ -51,7 +51,7 @@ function ServicesPage() {
           <div className="mt-12 grid gap-6 md:grid-cols-4">
             {[
               { n: "01", t: "Tell Us Your Need", d: "Call us or WhatsApp your requirement." },
-              { n: "02", t: "Get a Quick Quote", d: "We confirm pricing within 15 minutes." },
+              { n: "02", t: "Get a Quick Price", d: "We confirm pricing within 15 minutes." },
               { n: "03", t: "Confirm & Schedule", d: "Pick a delivery time that suits you." },
               { n: "04", t: "Receive at Site", d: "Materials arrive on time, inspected." },
             ].map((step) => (
