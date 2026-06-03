@@ -27,6 +27,8 @@ const products = [
   { name: "M-Sand & River Sand", desc: "Washed, graded sand for plastering & concreting." },
   { name: "Aggregates / Jelly", desc: "20mm, 12mm & 40mm jelly for all RCC works." },
   { name: "Bricks", desc: "Red bricks, fly-ash bricks & AAC blocks." },
+  { name: "JCB / Backhoe Rental", desc: "Hourly & daily rental for excavation & loading." },
+  { name: "Dump Truck Rental", desc: "Heavy-duty tipper trucks for site transport." },
 ];
 
 function HomePage() {
