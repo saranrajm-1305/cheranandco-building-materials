@@ -36,6 +36,11 @@ const products = [
   { img: imgHardware, name: "Hardware & Tools", brands: "On Request", desc: "Nails, binding wire, tools and accessories to keep your site moving without trips to multiple shops." },
 ];
 
+const rentals = [
+  { img: imgJcb, name: "JCB / Backhoe Rental", brands: "Hourly · Daily · With Operator", desc: "Excavation, trenching, loading and site clearing. Experienced operators available. Book by the hour or day across Coimbatore." },
+  { img: imgDump, name: "Dump Truck Rental", brands: "Tipper · Heavy Duty · On Time", desc: "Transport sand, aggregates, debris and construction waste. Reliable drivers and flexible scheduling for your project needs." },
+];
+
 function ProductsPage() {
   return (
     <>
