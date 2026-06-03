@@ -1,16 +1,16 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight, CheckCircle2, Truck, ShieldCheck, Clock, Star, Phone, MapPin } from "lucide-react";
 import hero from "@/assets/hero-construction.jpg";
-import ch1 from "@/assets/ch1.asset.json";
-import ch2 from "@/assets/ch2.asset.json";
-import ch3 from "@/assets/ch3.asset.json";
-import { LeadForm } from "@/components/LeadForm";
+import aboutYard from "@/assets/about-yard.jpg";
+import aboutYard2 from "@/assets/about-yard2.jpg";
+import ctaBg from "@/assets/gallery-delivery.jpg";
+import { CallEnquiry } from "@/components/CallEnquiry";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Cheran & Co. — Building Materials Supplier in Coimbatore" },
-      { name: "description", content: "Trusted supplier of cement, steel, blocks, sand & aggregates in Podanur, Coimbatore. 24/7 delivery, best prices. Get a free quote today." },
+      { name: "description", content: "Trusted supplier of cement, steel, blocks, sand & aggregates in Podanur, Coimbatore. Open 24/7. Call us for a quick price." },
       { property: "og:title", content: "Cheran & Co. — Building Materials Supplier" },
       { property: "og:description", content: "One stop for all your building needs. Cement, steel, blocks, sand & more delivered 24/7." },
       { property: "og:url", content: "/" },
@@ -48,11 +48,11 @@ function HomePage() {
               From cement and steel to blocks, sand and aggregates — Cheran & Co. delivers premium building materials to your site, on time, every time.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-              <Link to="/contact" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
-                Get Free Quote <ArrowRight className="h-4 w-4" />
-              </Link>
-              <a href="tel:+919865467787" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10">
-                <Phone className="h-4 w-4" /> +91 98654 67787
+              <a href="tel:+919865467787" className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
+                <Phone className="h-4 w-4" /> Call Now — +91 98654 67787
+              </a>
+              <a href="https://wa.me/919865467787" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white backdrop-blur transition-colors hover:bg-white/10">
+                WhatsApp Us <ArrowRight className="h-4 w-4" />
               </a>
             </div>
             <div className="mt-8 grid grid-cols-3 gap-3 border-t border-white/15 pt-6 sm:gap-6">
@@ -68,12 +68,17 @@ function HomePage() {
               ))}
             </div>
           </div>
-          {/* Lead capture card */}
+          {/* Call enquiry card */}
           <div className="relative">
             <div className="rounded-2xl border border-white/10 bg-background/95 p-6 shadow-[var(--shadow-elegant)] backdrop-blur md:p-8">
-              <h2 className="font-serif text-2xl font-bold text-navy">Request a Free Quote</h2>
-              <p className="mt-1 text-sm text-muted-foreground">Tell us what you need — we'll get back within 15 minutes.</p>
-              <div className="mt-5"><LeadForm /></div>
+              <h2 className="font-serif text-2xl font-bold text-navy">Enquire by Call</h2>
+              <p className="mt-1 text-sm text-muted-foreground">Speak directly with our team — share what you need and get a quick price.</p>
+              <div className="mt-5"><CallEnquiry /></div>
+              <div className="mt-5 grid grid-cols-3 gap-3 border-t border-border pt-4 text-center">
+                <div><div className="font-serif text-lg font-bold text-navy">15 min</div><div className="text-[10px] uppercase tracking-wider text-muted-foreground">Quick Reply</div></div>
+                <div><div className="font-serif text-lg font-bold text-navy">24/7</div><div className="text-[10px] uppercase tracking-wider text-muted-foreground">Available</div></div>
+                <div><div className="font-serif text-lg font-bold text-navy">All Sizes</div><div className="text-[10px] uppercase tracking-wider text-muted-foreground">Orders</div></div>
+              </div>
             </div>
           </div>
         </div>
@@ -83,7 +88,7 @@ function HomePage() {
       <section className="border-y border-border bg-secondary">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-8 md:grid-cols-4 md:px-6">
           {[
-            { i: Truck, t: "Free Site Delivery", d: "Across Coimbatore region" },
+            { i: Truck, t: "Site Delivery", d: "Across Coimbatore region" },
             { i: ShieldCheck, t: "Genuine Brands", d: "Direct from manufacturers" },
             { i: Clock, t: "24/7 Service", d: "Order any time of day" },
             { i: Star, t: "Best Prices", d: "Bulk discounts available" },
@@ -127,8 +132,8 @@ function HomePage() {
       <section className="bg-secondary py-20">
         <div className="mx-auto grid max-w-7xl gap-10 px-4 md:grid-cols-2 md:items-center md:px-6">
           <div className="grid grid-cols-2 gap-4">
-            <img src={ch1.url} alt="Concrete block production at Cheran & Co." className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]" loading="lazy" />
-            <img src={ch3.url} alt="Cheran & Co. yard with Ramco cement display" className="aspect-[4/5] mt-8 w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]" loading="lazy" />
+            <img src={aboutYard} alt="Cheran & Co. building materials yard" className="aspect-[4/5] w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]" loading="lazy" />
+            <img src={aboutYard2} alt="Stocked building materials at Cheran & Co." className="aspect-[4/5] mt-8 w-full rounded-2xl object-cover shadow-[var(--shadow-elegant)]" loading="lazy" />
           </div>
           <div>
             <div className="text-xs uppercase tracking-widest text-accent">About Cheran & Co.</div>
@@ -170,14 +175,14 @@ function HomePage() {
 
       {/* CTA */}
       <section className="relative overflow-hidden bg-navy-deep py-20 text-primary-foreground">
-        <img src={ch2.url} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-15" loading="lazy" />
+        <img src={ctaBg} alt="" aria-hidden className="absolute inset-0 h-full w-full object-cover opacity-15" loading="lazy" />
         <div className="relative mx-auto max-w-4xl px-4 text-center md:px-6">
           <h2 className="font-serif text-3xl font-bold md:text-5xl">Ready to Start Your Project?</h2>
-          <p className="mt-4 text-white/80">Get a personalised quote in minutes. We deliver across Coimbatore — 24 hours a day.</p>
+          <p className="mt-4 text-white/80">Call us for a quick price. We deliver across Coimbatore — 24 hours a day.</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
-              Request a Quote <ArrowRight className="h-4 w-4" />
-            </Link>
+            <a href="tel:+919865467787" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3.5 text-sm font-semibold text-accent-foreground shadow-[var(--shadow-gold)] transition-transform hover:scale-105">
+              <Phone className="h-4 w-4" /> Call +91 98654 67787
+            </a>
             <a href="https://maps.app.goo.gl/aWmAhacPNxwa3JdP8" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3.5 text-sm font-semibold text-white hover:bg-white/10">
               <MapPin className="h-4 w-4" /> Visit Our Yard
             </a>
