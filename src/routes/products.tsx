@@ -48,7 +48,7 @@ function ProductsPage() {
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
           <div className="text-xs uppercase tracking-widest text-accent">Our Products</div>
           <h1 className="mt-3 font-serif text-4xl font-bold md:text-5xl">Everything You Need to Build</h1>
-          <p className="mt-5 text-white/80">From foundation to finishing — explore our full range of building materials.</p>
+          <p className="mt-5 text-white/80">From foundation to finishing — plus JCB & dump truck rental for your site.</p>
         </div>
       </section>
       <section className="mx-auto max-w-7xl px-4 py-20 md:px-6">
