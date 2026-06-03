@@ -24,6 +24,8 @@ const services = [
   { i: ClipboardList, t: "Project Consultation", d: "Tap into our experience to choose the right materials and brands for every stage of construction." },
   { i: Headphones, t: "24/7 Customer Support", d: "Whether it's 3 PM or 3 AM, our team picks up the phone. Emergencies and last-minute orders welcome." },
   { i: MapPinned, t: "Region-Wide Coverage", d: "Serving Podanur, Madukkarai, Sundarapuram, Kuniyamuthur, Pollachi Road and the wider Coimbatore region." },
+  { i: Construction, t: "JCB / Backhoe Rental", d: "Available for excavation, loading and site preparation. Hire by the hour or day across Coimbatore." },
+  { i: Truck, t: "Dump Truck Rental", d: "Heavy-duty dump trucks for transporting sand, aggregates and debris to and from your site." },
 ];
 
 function ServicesPage() {
