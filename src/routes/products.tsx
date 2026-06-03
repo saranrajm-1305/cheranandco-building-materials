@@ -98,6 +98,7 @@ function ProductsPage() {
           </div>
         </div>
       </section>
+      <section className="bg-accent py-14 text-accent-foreground">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-5 px-4 text-center md:flex-row md:px-6 md:text-left">
           <div>
             <h2 className="font-serif text-2xl font-bold md:text-3xl">Need something not listed here?</h2>
