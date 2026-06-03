@@ -1,12 +1,12 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { MapPin, Phone, Mail, Clock, MessageCircle } from "lucide-react";
-import { LeadForm } from "@/components/LeadForm";
+import { CallEnquiry } from "@/components/CallEnquiry";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: "Contact Us — Cheran & Co. Building Materials Supplier" },
-      { name: "description", content: "Get in touch for a free quote. Call +91 98654 67787 or visit our yard at RK Complex, Podanur, Coimbatore. Open 24/7." },
+      { name: "description", content: "Call +91 98654 67787 or visit our yard at RK Complex, Podanur, Coimbatore. Open 24/7." },
       { property: "og:title", content: "Contact — Cheran & Co." },
       { property: "og:description", content: "Call, WhatsApp or visit. We're open 24/7 in Podanur, Coimbatore." },
       { property: "og:url", content: "/contact" },
@@ -64,9 +64,17 @@ function ContactPage() {
           </div>
 
           <div className="rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-elegant)] md:p-8">
-            <h2 className="font-serif text-2xl font-bold text-navy">Request a Free Quote</h2>
-            <p className="mt-1 text-sm text-muted-foreground">Fill the form — we'll WhatsApp you a price within minutes.</p>
-            <div className="mt-5"><LeadForm /></div>
+            <h2 className="font-serif text-2xl font-bold text-navy">Talk to Us Directly</h2>
+            <p className="mt-1 text-sm text-muted-foreground">Call or WhatsApp us with your requirement — we'll share a price within minutes.</p>
+            <div className="mt-5"><CallEnquiry /></div>
+            <div className="mt-6 rounded-xl bg-secondary p-4 text-sm text-muted-foreground">
+              <p className="font-semibold text-navy">What to share when you call:</p>
+              <ul className="mt-2 space-y-1 text-xs">
+                <li>• Product you need (cement, steel, blocks, sand, etc.)</li>
+                <li>• Approximate quantity</li>
+                <li>• Delivery location & date</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>

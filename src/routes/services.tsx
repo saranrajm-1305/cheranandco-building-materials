@@ -16,7 +16,7 @@ export const Route = createFileRoute("/services")({
 });
 
 const services = [
-  { i: Truck, t: "Free Site Delivery", d: "We deliver to your construction site across Coimbatore — no minimum order, no hidden charges." },
+  { i: Truck, t: "Site Delivery", d: "We deliver to your construction site across Coimbatore — on time, every time." },
   { i: Package, t: "Bulk Supply for Projects", d: "Special pricing and dedicated logistics for builders, contractors and large-scale projects." },
   { i: Calculator, t: "Quantity Estimation", d: "Not sure how much you need? Share your plan — we'll help you estimate quantities and budget." },
   { i: ClipboardList, t: "Project Consultation", d: "Tap into our experience to choose the right materials and brands for every stage of construction." },
@@ -50,7 +50,7 @@ function ServicesPage() {
           <h2 className="text-center font-serif text-3xl font-bold text-navy md:text-4xl">How It Works</h2>
           <div className="mt-12 grid gap-6 md:grid-cols-4">
             {[
-              { n: "01", t: "Tell Us Your Need", d: "Call, WhatsApp or fill the form." },
+              { n: "01", t: "Tell Us Your Need", d: "Call us or WhatsApp your requirement." },
               { n: "02", t: "Get a Quick Quote", d: "We confirm pricing within 15 minutes." },
               { n: "03", t: "Confirm & Schedule", d: "Pick a delivery time that suits you." },
               { n: "04", t: "Receive at Site", d: "Materials arrive on time, inspected." },
@@ -63,7 +63,7 @@ function ServicesPage() {
             ))}
           </div>
           <div className="mt-12 text-center">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)]">Start Your Order</Link>
+            <a href="tel:+919865467787" className="inline-flex items-center gap-2 rounded-full bg-navy px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-[var(--shadow-elegant)]">Call Now — +91 98654 67787</a>
           </div>
         </div>
       </section>
