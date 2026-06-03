@@ -32,10 +32,10 @@ export function LeadForm({ compact = false }: { compact?: boolean }) {
   return (
     <form onSubmit={onSubmit} className="grid gap-3">
       <div className={compact ? "grid gap-3 md:grid-cols-2" : "grid gap-3"}>
-        <input required name="name" placeholder="Your Name" className="rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" />
-        <input required name="phone" type="tel" placeholder="Phone Number" className="rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent" />
+        <input required name="name" placeholder="Your Name" className="rounded-lg border border-border bg-background px-4 py-3 text-base md:text-sm outline-none focus:border-accent" />
+        <input required name="phone" type="tel" inputMode="tel" placeholder="Mobile Number" className="rounded-lg border border-border bg-background px-4 py-3 text-base md:text-sm outline-none focus:border-accent" />
       </div>
-      <select name="product" defaultValue="" className="rounded-lg border border-border bg-background px-4 py-3 text-sm outline-none focus:border-accent">
+      <select required name="product" defaultValue="" className="rounded-lg border border-border bg-background px-4 py-3 text-base md:text-sm outline-none focus:border-accent">
         <option value="" disabled>Select a product</option>
         <option>Cement</option>
         <option>Steel / TMT Bars</option>
