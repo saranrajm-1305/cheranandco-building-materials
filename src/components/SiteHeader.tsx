@@ -18,10 +18,10 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border bg-background/85 backdrop-blur-md">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo.url} alt="Cheran & Co. Logo" className="h-12 w-12 rounded-full object-cover ring-2 ring-accent/60" />
+          <img src={logo.url} alt="Cheran & Co. Logo" className="h-10 w-10 rounded-full object-cover ring-2 ring-accent/60 sm:h-12 sm:w-12" />
           <div className="leading-tight">
-            <div className="font-serif text-lg font-bold text-navy">Cheran <span className="text-accent">& Co.</span></div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Building Materials Supplier</div>
+            <div className="font-serif text-base font-bold text-navy sm:text-lg">Cheran <span className="text-accent">& Co.</span></div>
+            <div className="hidden text-[10px] uppercase tracking-widest text-muted-foreground sm:block">Building Materials Supplier</div>
           </div>
         </Link>
         <nav className="hidden items-center gap-7 lg:flex">
